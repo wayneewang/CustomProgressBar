@@ -12,6 +12,7 @@ import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity {
 
+
     @InjectView(R.id.progressBar) GoalProgressBar progressBar;
 
     private final Random random = new Random();
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         if (savedInstanceState == null) {
             resetProgress();
         }
+        progressBar.setGoal(70);
     }
 
     @OnClick(R.id.resetProgressBtn)

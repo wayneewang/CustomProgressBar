@@ -7,20 +7,29 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin">
+    android:paddingTop="@dimen/activity_vertical_margin"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <com.codepath.customprogressbar.GoalProgressBar
+
         android:id="@+id/progressBar"
-        style="?android:progressBarStyleHorizontal"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:indeterminate="false"/>
+       />
 
     <Button
         android:id="@+id/resetProgressBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="@string/reset_progress"/>
+        android:text="@string/reset_progress"
+        app:goalReachedColor = "@color/green"
+        app:goalNotReachedColor = "@color/dark_gray"
+        app:unfilledSectionColor = "@color/gray"
+        app:barHeight = "4dp"
+        app:goalIndicatorHeight = "16dp"
+        app:goalIndicatorWidth="4dp"
+        app:indicatorType = "line"/>
 
 </LinearLayout>
